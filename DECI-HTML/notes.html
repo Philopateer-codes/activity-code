@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(coffee-beans.jpg);
+            background-size: cover;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+        }
+        .me-cont {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .me-cont h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #65451F;
+        }
+        .coffee-img {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .coffee-img img {
+            width: 250px;
+            
+        }
+        select, input[type="text"], button {
+            padding: 10px;
+           
+            margin-bottom: 10px;
+            width: 100%;
+           
+            border-radius: 15px;
+            border:#65451F solid 2px;
+        }
+       label[for="coffee"]{
+        font-size: 22px;
+        font-weight: 600;
+       }
+            
+        
+        button {
+            background-color: #65451F;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #4A3214;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="me-cont">
+        <h1>This is my coffee shop ☕️</h1>
+        <div class="coffee-img">
+            <img src="cup-coffee.jpg" alt="cup of coffee" style="border-radius:18px 0 0 18px;">
+            <img src="coffee-cup-2.jpg" alt="cup of coffee"style="border-radius:0 18px 18px  0;">
+        </div>
+        <form action="post">
+            <label for="coffee">Choose your coffee type:</label>
+            <select id="coffee" name="coffee"size="2">
+                <option>Iced coffee</option>
+                <option>Black coffee</option>
+                <option>Iced latte</option>
+                <option>Cold brew</option>
+            </select>
+            <br>
+            <h2>Milk type</h2>
+            <label><input type="checkbox" name="milk" value="skimmed"> Skimmed milk</label>
+            <label><input type="checkbox" name="milk" value="oat"> Oat milk</label>
+            <label><input type="checkbox" name="milk" value="almond"> Almond milk</label>
+            <label><input type="checkbox" name="milk" value="whole"> Whole milk</label>
+            <label><input type="checkbox" name="milk" value="none"> No milk</label>
+            <br><br>
+            <label for="coffee">Enter a custom ingredient:</label>
+            <input type="text" id="custom" name="custom">
+            <br><br>
+            <button type="submit">Submit Order</button>
+        </form>
+    </div>
+</body>
+</html>
